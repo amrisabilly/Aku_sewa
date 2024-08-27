@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "title";
+    src: url("../asset/PPEiko-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "text";
+    src: url("../asset/PPNeueMontreal-Medium.otf") format("opentype");
+}
+
+:root {
+    --title: "title", sans-serif;
+    --text: "text", sans-serif;
+    --black-color: #1A1A1A;
+    --grey-color: #292a2e ;
+    --white-color: #f7f7f7;
+    --blue-color: #004577;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../asset/login1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(60%);
+    z-index: -1; 
+}
+
+.kotak{
+    background-color: rgba(48, 47, 47, 0.7);
+    height: 37em;
+    width: 30em;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.kotak h2{
+    color: var(--white-color);
+    font-family: var(--title);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+}
+
+.kotak h2 span{
+    background-color: var(--blue-color);
+    padding-right: 0.2em;
+}
+
+.input {
+    position: relative;
+    border-bottom: 0.2px solid #ccc;
+    margin: 35px 5em;
+}
+
+.input {
+    position: relative;
+    width: 320px;
+}
+
+.input label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+    pointer-events: none;
+    transition: 0.15s ease;
+}
+
+.input input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid #fff;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    padding: 0;
+}
+
+.input input:focus~label,
+.input input:not(:placeholder-shown)~label {
+    font-size: 1rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+.kotak p{
+    margin-top: 1em;
+    margin-left: 4.1em;
+    font-family: var(--text);
+    color: var(--white-color);
+    font-size: 19px;
+}
+
+.kotak  p a{
+    text-decoration: none;
+    color: var(--blue-color);
+    font-family: var(--text);
+    font-size: 19px;
+}
+
+.kotak button{
+    margin-top: 1em;
+    height: 3em;
+    width: 20em;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 0.1em;
+}
+
+.kotak button:hover{
+    background-color: #00375f;
+    transition: background-color 0.5s ease;
+}
+
+

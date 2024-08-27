@@ -1,0 +1,332 @@
+@font-face {
+    font-family: "title";
+    src: url("../asset/PPEiko-Medium.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "text";
+    src: url("../asset/PPNeueMontreal-Medium.otf") format("opentype");
+  }
+  
+  :root {
+    --title: "title", sans-serif;
+    --text: "text", sans-serif;
+    --black-color: #1a1a1a;
+    --grey-color: #292a2e;
+    --white-color: #f7f7f7;
+    --blue-color: #004577;
+    --light-black: rgba(0, 0, 0, 0.89);
+    --black: #000;
+    --white: #fff;
+    --grey: #aaa;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  
+  .navbar-container .shopping{
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    height: 10vh;
+    width: 5rem;
+    padding: 0 1.6rem;
+    color: var(--blue-color);
+    transition: 0.3s;
+  }
+  
+  .navbar-container .shopping:hover{
+    color: #51769e;
+    transition: color 0.5s ease;
+  }
+  
+  .logo h2 {
+    font-family: var(--title);
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: 600;
+    margin-left: 2em;
+  }
+  
+  .logo h2 span {
+    background-color: var(--blue-color);
+    font-weight: 600;
+    padding-right: 0.5em;
+    padding-bottom: 0.3em;
+    padding-top: 0.2em;
+    color: var(--white);
+  }
+  
+  .menu-items {
+    order: 2;
+    display: flex;
+    margin-left: 20em;
+    margin-top: 0.8em;
+  }
+  
+  .menu-items li {
+    list-style: none;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    display: flex;
+  }
+  
+  .navbar-container ul a {
+    text-decoration: none;
+    font-family: var(--text);
+    color: var(--black);
+    font-size: 20px;
+    position: relative;
+  }
+  
+  .navbar-container ul a:after {
+    content: "";
+    position: absolute;
+    background-color: #295a8d;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    color: #e0e0e0;
+  }
+  
+  .navbar-container ul a:hover::after {
+    width: 100%;
+  }
+  
+  
+  .hal1 {
+    background: whitesmoke;
+    height: 100vh;
+  }
+  
+  .hal1 .text {
+    position: absolute;
+    top: 13em;
+    left: 6em;
+  }
+  
+  .hal1 .text h1 {
+    font-family: var(--title);
+    font-size: 64px;
+    font-weight: 700;
+  }
+  
+  .hal1 .text h5 {
+    font-family: var(--text);
+    margin-top: 1em;
+    font-size: 20px;
+  }
+  
+  .hal1 a button {
+    position: absolute;
+    top: 5em;
+    padding: 14px 50px;
+    background: var(--blue-color);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    display: inline-block;
+    margin: 18em 4.5em;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .hal1 a button:hover {
+    transform: rotate(5deg);
+  }
+  
+  .hal1 .mic {
+    position: absolute;
+    width: 22em;
+    left: 72em;
+    top: 9em;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .hal1 .mic:hover {
+      transform: rotate(8deg);
+  }
+  .hal1 .camera {
+    position: absolute;
+    width: 45em;
+    left: 40em;
+    top: 12em;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .hal1 .camera:hover {
+      transform: rotate(8deg);
+  }
+  
+  /* Halaman 2 */
+  .title{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+  }
+  
+  .title h2{
+    font-family: var(--title);
+    font-weight: 500;
+    justify-content: center;
+  }
+  
+  .baris{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .baris .kolom{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .baris .kolom .kot{
+    margin-top: 4em;
+    background-color: #F5F5F5;
+    height: 16em;
+    width: 28em;
+    border-radius: 0.6em;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .baris .kolom .kot:hover{
+    transform: rotate(5deg);
+  }
+  
+  .kot .ket{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .kot .ket h5{
+    font-family: var(--text);
+    font-size: 20px;
+    font-weight: 550;
+    color: var(--black-color);
+  }
+  
+  .log {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+  
+  /* Halaman 3 */
+  .bdy{
+    background-image: url(../asset/carousel.png);
+    background-size: cover;
+  }
+  
+  .bdy a .explore{
+    padding: 5px 70px;
+    background: var(--blue-color);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .bdy a .explore:hover {
+    transform: rotate(5deg);
+  }
+  
+  .harga{
+    display: flex;
+    gap: 2em;
+  }
+  
+  .harga i{
+    color: var();
+  }
+  
+  .harga .booking{
+    padding: 3px 10px;
+    background: transparent;
+    border-radius: 4px;
+    color: var(--blue-color);
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .harga .booking:hover {
+    transform: rotate(5deg);
+  
+  }
+  
+  .cari {
+    height: 4em;
+    width: 20em;
+    background-color: #F7F7F7;
+    border: none;
+    border-radius: 1em 0em 0em 1em;
+    padding: 1em;
+  }
+  
+  .cari:focus{
+    border: 2px solid white;
+  }
+  
+  .cari-tombol{
+    border: none;
+    background-color: #F7F7F7;
+    border-radius: 0em 1em 1em 0em;
+    padding: 1em;
+  }
+  
+  .footer-hover{
+    text-decoration: none;
+    color: #C7C8CC;
+  }
+  
+  .footer-hover:hover{
+    color: #C7C8CC;
+    border-bottom: 1px solid white;
+  }
+  
+  
